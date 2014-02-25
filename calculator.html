@@ -4,7 +4,7 @@
 	<title>Calculator</title>
 	<meta charset="utf-8">
 <body>
-	<h2>Calculator: First field is a number, second an opertator, and third is number</h2>
+	<h2>Calculator: First field is a number, second an operator, and third is number</h2>
 	<form onsubmit="return calc();">
 		<input id="num1" type="text">
 		<input id="operator" type="text">
@@ -14,11 +14,9 @@
 	<p>Result: <span id="result"></span></p>
 	<script type="text/javascript">
 		function calc(){
-			var num1 = document.getElementById("num1").value;
-			var num2 = document.getElementById("num2").value;
+			var num1 = Number(document.getElementById("num1").value);
+			var num2 = Number(document.getElementById("num2").value);
 			var operator = document.getElementById("operator").value;
-			parseInt(num1);
-			parseInt(num2);
 			var result;
 			if(operator == "+") {
 				result = num1 + num2;
